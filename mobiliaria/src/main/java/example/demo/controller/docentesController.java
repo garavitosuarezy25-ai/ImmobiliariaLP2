@@ -1,4 +1,4 @@
-package villa_olimpica.demo.controller;
+package example.demo.controller;
 
 import java.util.List;
 
@@ -12,9 +12,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import example.demo.model.Empleado;
+import example.demo.service.EmpleadoService;
 import lombok.RequiredArgsConstructor;
-import villa_olimpica.demo.model.docentes;
-import villa_olimpica.demo.service.docentesService;
 
 @RestController
 @RequestMapping("/api/docentes")
@@ -22,30 +22,30 @@ import villa_olimpica.demo.service.docentesService;
 @CrossOrigin(origins = "*")
 public class docentesController {
 
-    private final docentesService docentesService;
+    private final EmpleadoService EmpleadoService;
 
     @PostMapping
-    public docentes crear(@RequestBody docentes d) {
-        return docentesService.crear(d);
+    public Empleado crear(@RequestBody Empleado e) {
+        return EmpleadoService.crear(e);
     }
 
     @PutMapping("/{id}")
-    public docentes editar(@PathVariable Long id, @RequestBody docentes d) {
-        return docentesService.editar(id, d);
+    public Empleado editar(@PathVariable Long id, @RequestBody Empleado e) {
+        return EmpleadoService.editar(id, e);
     }
 
     @GetMapping
-    public List<docentes> listar() {
-        return docentesService.listar();
+    public List<Empleado> listar() {
+        return EmpleadoService.listar();
     }
 
     @GetMapping("/{id}")
-    public docentes buscar(@PathVariable Long id) {
-        return docentesService.buscarPorId(id);
+    public Empleado buscar(@PathVariable Long id) {
+        return EmpleadoService.buscarPorId(id);
     }
 
     @DeleteMapping("/{id}")
     public void eliminar(@PathVariable Long id) {
-        docentesService.eliminar(id);
+        EmpleadoService.eliminar(id);
     }
 }

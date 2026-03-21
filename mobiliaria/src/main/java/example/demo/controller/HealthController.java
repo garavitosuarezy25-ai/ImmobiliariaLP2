@@ -1,4 +1,4 @@
-package villa_olimpica.demo.controller;
+package example.demo.controller;
 
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
