@@ -12,7 +12,7 @@ import jakarta.persistence.Table;
 public class Empleado {
 
     @Id
-    @Column(name = "ID_EMPLEADO")
+    @Column(name = "IDEMPLEADO") 
     private Long idEmpleado;
 
     @Column(name = "NOMBRE", nullable = false)
@@ -21,7 +21,7 @@ public class Empleado {
     @Column(name = "APELLIDO", nullable = false)
     private String apellido;
 
-    @Column(name = "FECHA_NACIMIENTO")
+    @Column(name = "FECHANACIMIENTO") 
     private Date fechaNacimiento;
 
     @Column(name = "DOMICILIO")
@@ -33,7 +33,6 @@ public class Empleado {
     @Column(name = "CORREO")
     private String correo;
 
-    // Constructor vacío
     public Empleado() {
     }
 

@@ -1,5 +1,5 @@
-const API_BASE = "http://localhost:5052/api";
+const API_BASE = "http://localhost:5052/api/mobiliaria";
 
 const API = {
-    docentes: `${API_BASE}/docentes`
+    empleados: API_BASE
 };

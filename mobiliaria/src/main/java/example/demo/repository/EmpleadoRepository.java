@@ -8,6 +8,6 @@ import example.demo.model.Empleado;
 
 public interface EmpleadoRepository extends JpaRepository<Empleado, Long> {
 
-    List<Empleado> findByEmpleadoId(Long IdEmpleado);
+    List<Empleado> findByidEmpleado(Long idEmpleado);
 
 }

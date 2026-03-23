@@ -17,10 +17,10 @@ import example.demo.service.EmpleadoService;
 import lombok.RequiredArgsConstructor;
 
 @RestController
-@RequestMapping("/api/docentes")
+@RequestMapping("/api/mobiliaria")
 @RequiredArgsConstructor
 @CrossOrigin(origins = "*")
-public class docentesController {
+public class EmpleadoController {
 
     private final EmpleadoService EmpleadoService;
 
